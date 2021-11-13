@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: darkslategray;
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+   
+
+}
+.h1{
+    display:flex;
+    background-color: forestgreen;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    padding: 0px;
+    margin: 0px;
+    height: 45px;
+    width: 100%;
+    
+}
