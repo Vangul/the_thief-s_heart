@@ -1,8 +1,10 @@
-var story = {
+var story;
+function getStory(name) {
+    return {
 currentScence: "standingPlaza",
 standingPlaza: {
         title: "Prolog",
-        story: "Sie/er steht inmitten eines Platzes. Weit vor ihr/ihm ist ein Schafott aufgestellt und die Menschen eilen in Scharren auf den Platz. Denn eine Hinrichtung ist in dieser Stadt immer ein großes Spektakel.",
+        story: `${name} steht inmitten eines Platzes. Weit vor ihr/ihm ist ein Schafott aufgestellt und die Menschen eilen in Scharren auf den Platz. Denn eine Hinrichtung ist in dieser Stadt immer ein großes Spektakel.`,
     choices:[
         {
             choice: "Folge den Menschen und gehe selbst näher heran.",
@@ -17,7 +19,7 @@ standingPlaza: {
 
 beforeSchafott: {
          title: "Prolog",
-            story: "Es herrscht ein wildes Gedränge auf dem Weg zum Schafott. Nach einigen Minuten des durch die Menschen hindurchquetschen steht sie/er vor dem Schafott und sieht wie die Soldaten aufgereiht stehen und niemanden näher heran lassen.",
+            story: `Es herrscht ein wildes Gedränge auf dem Weg zum Schafott. Nach einigen Minuten des durch die Menschen hindurchquetschen steht ${name} vor dem Schafott und sieht wie die Soldaten aufgereiht stehen und niemanden näher heran lassen.`,
         choices:[
             {
                 choice: "Verfolge das Geschehen",
@@ -44,19 +46,25 @@ standingPlaza2: {
                    },                        
     ],
 }}
+}
 
 
 
 
 
 
-
-document.addEventListener("DOMContentLoaded",function(){
+document.addEventListener("DOMContentLoaded", function(){
 var startButton = document.querySelector("#startButton")
-var input = document.querySelector("#name-input")
 var inhalt = document.querySelector("#inhalt")
-startButton.addEventListener("click", renderScene) 
+startButton.addEventListener("click", function(){
+    let name = document.querySelector("#name-input")
+    story = getStory (name.value)
+    renderScene()
 })
+})
+
+
+
 
 
 function renderScene() {
@@ -78,12 +86,18 @@ function getInputValue(){
         if (inputs[i].checked){
             story.currentScence = inputs[i].getAttribute('data-destination')
             renderScene()
+            return;
         }
     }
+story.currentScence = story[story.currentScence]
 }
+
 
 function getInputs(){
     var input = ""
+    if (!story[story.currentScence].choices) {
+        return ""
+    }
     for(var i = 0; i < story[story.currentScence].choices.length; i++){
         input += ` 
         <div>
