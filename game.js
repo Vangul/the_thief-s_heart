@@ -27,11 +27,41 @@ beforeSchafott: {
             },
             {
                 choice: "Wende dich ab und sie dir die Menschen an",
-                destination: "peopleBeforeShafott"
+                destination: "peopleBeforeSchafott"
             },
         ]
     },
-          
+ 
+beforeSchafott2: {
+        title: "Prolog",
+        story: `Die Henker bringen geschäftig ihr Werkzeug auf das Schafott und es wird klar, dass mehrere Menschen an diesem Tag hingerichtet werden würden. Neugierig sieht sich ${name} um.`,
+        choices:[
+           {
+               choice: "Einen älteren Mann der neben dir steht fragen, wer heute hingerichtet wird.",
+               destination: "talkOldMan"
+           },
+           {
+               choice: "Sie dir die schaulustigen Menschen an.",
+               destination: "peopleBeforeSchafott"
+           },
+       ]
+   }, 
+
+peopleBeforeSchafott: {
+        title: "Prolog",
+        story: `Es ist ein bunter Mix an Menschen der hier steht. Viele unterhalten sich angeregt und ${name} schnappt einige Bruchstücke auf und erfährt, dass die Marine berüchtigte Piraten gefasst hat, welche heute hingerichtet werden sollen.`,
+       choices:[
+           {
+               choice: "Neben  dir steht ein älterer Mann, du fragst ihn was er weiß.",
+               destination: "talkOldMan"
+           },
+           {
+               choice: "Deine Augen bleiben an einen reichen Kaufmann hängen. Du beobachtest ihn.",
+               destination: "stalkingKaufmann"
+           },
+       ]
+   },
+
 standingPlaza2: {
             title: "Prolog",
             story: `${name} hebt mitten im Getümmel den Kopf nach oben und versinkt in ihren/seinen Gedanken. Der Himmel ist grau und es sieht aus als würde bald ein Unwetter aufziehen.`,
@@ -45,7 +75,35 @@ standingPlaza2: {
                        destination: "screamPlaza"
                    },
                 ]  
-            },                                 
+            },     
+screamPlaza: {
+            title: "Prolog",
+            story: `Jemand schreit "Haltet den Dieb" und ${name} zuckt zusammen. ${name} sieht sich um und sieht eine kleine schlanke Gestalt das Weite suchen.`,
+            choices:[
+                       {
+                           choice: "Den Dieb nachstellen.",
+                           destination: "captureThief"
+                       },
+                       {
+                           choice: "Ehrleichter aufatmen und zum Schafott gehen.",
+                           destination: "beforeSchafott"
+                       },
+                    ]  
+                },
+captureThief: {
+            title: "Prolog",
+            story: `${name} eilt dem angeblichen Dieb hinterher. Weg von dem Weg der zum Schafott führt hinein in eine vollkommen verlassene Gasse. Nach Luft schnappend holt ${name} die fliehende Person ein.`,
+            choices:[
+                        {
+                            choice: "Ergreif den Arm des Diebes.",
+                            destination: "Fight"
+                        },
+                        {
+                            choice: "Erhebe deine Stimme und sage: Bleib stehen!",
+                            destination: "talkGasse"
+                               },
+                            ]  
+                        },                                           
     
 standingPlaza3: {
             title: "Prolog",
