@@ -34,23 +34,34 @@ beforeSchafott: {
           
 standingPlaza2: {
             title: "Prolog",
-            story: "Test",
+            story: `${name} hebt mitten im Getümmel den Kopf nach oben und versinkt in ihren/seinen Gedanken. Der Himmel ist grau und es sieht aus als würde bald ein Unwetter aufziehen.`,
             choices:[
                    {
-                       choice: "Test1",
-                       destination: "Test2"
+                       choice: "Weiter nachdenken",
+                       destination: "standingPlaza3"
                    },
                    {
-                       choice: "Test 3",
-                       destination: "Test4"
-                   },                        
-    ],
-}}
-}
-
-
-
-
+                       choice: "Ein Schrei ertönt und reißt dich aus den Gedanken",
+                       destination: "screamPlaza"
+                   },
+                ]  
+            },                                 
+    
+standingPlaza3: {
+            title: "Prolog",
+            story: `${name} erschaudert bei der Vorstellung, im Regen einen Weg nach Hause zu suchen. Aber ${name} wollte den weiten Weg in die Stadt auch nicht für umsonst gekommen sein. Immerhin gab es Arbeit hier.`,
+            choices:[
+               {
+                   choice: "Geh weiter zum Schafott",
+                   destination: "beforeSchafott"
+               },
+               {
+                   choice: "Ein Schrei hält dich davon ab weiter zu gehen und du siehst dich suchend um.",
+                   destination: "screamPlaza"
+               },     
+            ]
+}}}
+    
 
 
 document.addEventListener("DOMContentLoaded", function(){
