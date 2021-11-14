@@ -47,6 +47,21 @@ beforeSchafott2: {
        ]
    }, 
 
+talkOldMan: {
+    title: "Prolog",
+    story: `Der ältere Mann mustert ${name} kurz. Spuckt Kautabak vor ${name} auf den Boden.<br> "Aye, lebst du hinterm Mond?", fragt er. "Wurde doch groß angekündigt", führt er weiter aus und erzählt dann davon, dass die Marine eine Piratenbande aufgeknüpft hat. <br> Mehr Informationen gibt er nicht preis und schweift darin ab, wieviele Hinrichtungen er schon gesehen hat.`,
+    choices:[
+       {
+           choice: "Du hörst dem Mann aufmerksam zu und als er einen Namen erwähnt den du kennst, unterbrichst du ihn grob.",
+           destination: "talkOldMan2"
+       },
+       {
+           choice: "Du bedankst dich bei dem Mann und siehst etwas weiter weg einen reicht aussehenden Kaufmann. Du beobachtest ihn.",
+           destination: "stalkingKaufmann"
+       },
+   ]
+}, 
+
 peopleBeforeSchafott: {
         title: "Prolog",
         story: `Es ist ein bunter Mix an Menschen der hier steht. Viele unterhalten sich angeregt und ${name} schnappt einige Bruchstücke auf und erfährt, dass die Marine berüchtigte Piraten gefasst hat, welche heute hingerichtet werden sollen.`,
