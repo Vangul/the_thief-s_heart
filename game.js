@@ -62,6 +62,21 @@ talkOldMan: {
    ]
 }, 
 
+stalkingKaufmann: {
+    title: "Prolog",
+    story: `${name} beobachtet, wie sich der Kaufmann mit zwei anderen Männern unterhält und das nicht sonderlich freundlich.<br> ${name} nähert sich langsam und es wird klar, als der Kaufmann nur noch wenige Meter entfernt war, dass es sich um einen Streit handelt.<br> Anscheind wurde der Kaufmann bestohlen.`,
+    choices:[
+       {
+           choice: "Lausche dem Streit und sieh die Männer prüfend an, mit denen der Kaufmann spricht.",
+           destination: "stalkingKaufmann2"
+       },
+       {
+           choice: "Remple den Kaufmann an und prüfe mit einem jahrelang geübten Griff, ob der Kaufmann noch etwas interessantes von Wert hat.",
+           destination: "stealingKaufmann"
+       },
+   ]
+},
+
 peopleBeforeSchafott: {
         title: "Prolog",
         story: `Es ist ein bunter Mix an Menschen der hier steht. Viele unterhalten sich angeregt und ${name} schnappt einige Bruchstücke auf und erfährt, dass die Marine berüchtigte Piraten gefasst hat, welche heute hingerichtet werden sollen.`,
