@@ -133,7 +133,34 @@ captureThief: {
                             destination: "talkGasse"
                                },
                             ]  
-                        },                                           
+                        },                   
+                        
+            Fight: {
+                title: "Prolog",
+                story: `Der Dieb wehrt den Griff ab und bevor sich ${name} versieht liegt${name} mit schmerzverzerrtem Gesicht auf dem dreckigen Boden der Gasse. <br> Ein Messer steckt in ${name}s Bauch und der Dieb ist über alle Berge.`,
+                    choices:[
+                            {
+                            choice: "Schrei nach Hilfe.",
+                                            destination: "GameOver"
+                                        },
+                                
+                                            ]  
+                                        },          
+                                        
+            talkGasse: {
+                title: "Prolog",
+                story: `Zur Überraschung von ${name} bleibt der augenscheinliche Dieb tatsächlich stehen und entpuppt sich als ein Kind, vermutlich nicht älter als 13.<br> "Was willst du", faucht es ${name} entgegen und plötzlich beginnen die Augen de Kindes zu leuchten. <br>"Du mal wieder hier? Was verschafft uns die Ehre?", fragt der Kleine und packt ${name} an der Hand und zieht ${name} tiefer in die Gasse hinein.`,
+                    choices:[
+                            {
+                            choice: "Bist du das, Wurm? Bist du aber groß geworden, sagst du und verschweigst wieso du in der Stadt bist.",
+                            destination: "deepGasseTalk"
+                            },
+                            {
+                            choice: "Erzähl Wurm dass du ihn beinahe nicht erkannt hast und nach Arbeit suchst, weil das Geld zu Hause knapp wird.",
+                            destination: "deepGassetrueTalk"
+                            },
+                            ]  
+                            },          
     
 standingPlaza3: {
             title: "Prolog",
