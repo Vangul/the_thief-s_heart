@@ -62,6 +62,20 @@ talkOldMan: {
    ]
 }, 
 
+talkOldMan2: {
+    title: "Prolog",
+    story: `Der alte Mann mustert ${name} kritisch. "Wusste ich doch, dass du mir bekannt vorkommst. Das war dein Vater, den sie letztes Jahr aufgeknüft haben, aye?"<br> ${name} nickt, sagt aber nichts dazu. "Was war es noch einmal? Diebstahl? Schon seltsam, dafür hingerichtet zu werden in dieser Stadt.`,
+    choices:[
+        {
+            choice: "Dem Mann sagen er soll seinen Mund halten und ihn bedrohen.",
+            destination: "rememberDad"
+        },
+        {   choice: "Den alten Mann stehen lassen, weil die Erinnerungen noch zu frisch sind und außversehen einen Kaufmann dabei anrempeln.",
+            destination: "grumpyKaufmann"
+        },
+    ]
+},
+
 stalkingKaufmann: {
     title: "Prolog",
     story: `${name} beobachtet, wie sich der Kaufmann mit zwei anderen Männern unterhält und das nicht sonderlich freundlich.<br> ${name} nähert sich langsam und es wird klar, als der Kaufmann nur noch wenige Meter entfernt war, dass es sich um einen Streit handelt.<br> Anscheind wurde der Kaufmann bestohlen.`,
@@ -135,7 +149,7 @@ captureThief: {
                             ]  
                         },                   
                         
-            Fight: {
+Fight: {
                 title: "Prolog",
                 story: `Der Dieb wehrt den Griff ab und bevor sich ${name} versieht liegt${name} mit schmerzverzerrtem Gesicht auf dem dreckigen Boden der Gasse. <br> Ein Messer steckt in ${name}s Bauch und der Dieb ist über alle Berge.`,
                     choices:[
@@ -145,9 +159,21 @@ captureThief: {
                                         },
                                 
                                             ]  
-                                        },          
+                                        },      
                                         
-            talkGasse: {
+GameOver: {
+                title: "Prolog",
+                story: `Der Schrei nach Hilfe bleibt unbeantwortet und langsam aber sicher verblutet ${name}. <br>Zahlreiche Gedanken streifen ${name} aber nichts lässt sich fassen. Nicht die Erinnerung an Schwester und Bruder, die zu Hause auf Geld für Essen warten und auch nicht die Erinnerung an die Abenteuergeschichten des Vaters, der im letzten Jahr in genau dieser Stadt hingerichtet wurde.`,
+                choices:[
+                        {
+                        choice: "Geh zurück zum Anfang.",
+                        destination: "standingPlaza"
+                        },
+                                                            
+                        ]  
+                        },                               
+                                        
+talkGasse: {
                 title: "Prolog",
                 story: `Zur Überraschung von ${name} bleibt der augenscheinliche Dieb tatsächlich stehen und entpuppt sich als ein Kind, vermutlich nicht älter als 13.<br> "Was willst du", faucht es ${name} entgegen und plötzlich beginnen die Augen de Kindes zu leuchten. <br>"Du mal wieder hier? Was verschafft uns die Ehre?", fragt der Kleine und packt ${name} an der Hand und zieht ${name} tiefer in die Gasse hinein.`,
                     choices:[
