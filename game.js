@@ -4,7 +4,7 @@ function getStory(name) {
 currentScence: "standingPlaza",
 standingPlaza: {
         title: "Prolog",
-        story: `${name} steht inmitten eines Platzes. Weit vor ihr/ihm ist ein Schafott aufgestellt und die Menschen eilen in Scharren auf den Platz. Denn eine Hinrichtung ist in dieser Stadt immer ein großes Spektakel.`,
+        story: `${name} steht inmitten eines Platzes. Weit vor ${name} ist ein Schafott aufgestellt und die Menschen eilen in Scharren auf den Platz. Denn eine Hinrichtung ist in dieser Stadt immer ein großes Spektakel.`,
     choices:[
         {
             choice: "Folge den Menschen und gehe selbst näher heran.",
@@ -76,6 +76,34 @@ talkOldMan2: {
     ]
 },
 
+rememberDad: {
+    title: "Prolog",
+    story: `${name} fährt dem alten Mann über den Mund und bedroht ihn mit Gesten, die der Alte durchaus versteht. <br> "Chill, Kind", sagt der Alte ruhig. "Ich kannte Cliff und wollte damit nur sagen, dass hinterdem mehr stecken muss, als Diebstahl." <br> ${name} stimmt den Mann in Gedanken zu. Immerhin war ${name} unteranderem auch für eine Recherche in die Stadt zurückgekehrt. `,
+    choices:[
+        {
+            choice: "Frag den Alten ob er etwas darüber weiß.",
+            destination: "questionOldMan"
+        },
+        {   choice: "Frag den Alten, woher er deinen Vater kennt.",
+            destination: "rememberDad2"
+        },
+    ]
+},
+
+grumpyKaufmann: {
+    title: "Prolog",
+    story: `Etwas kopflos stürmt ${name} durch die Menge. Von den Erinnerungen an den Vater geplagt. Dabei rempelt ${name} ausversehen einen Mann an, der sichtbar zur Gilde der Kaufleute gehört. <br> ${name} hat eine hitzige Diskussion unterbrochen und ein Mann hält ${name} am Handgelenk fest. <br> "Hier geblieben kleiner Dieb", raunt der Mann in ${name}s Ohr.`,
+    choices:[
+        {
+            choice: "Reiß dich los und tritt dem Mann der dich festhält auf die Füße.",
+            destination: "fightKaufmannFriend"
+        },
+        {   choice: "Entschuldige dich, stell aber klar, dass du kein Dieb bist.",
+            destination: "sorryKaufmann"
+        },
+    ]
+},
+
 stalkingKaufmann: {
     title: "Prolog",
     story: `${name} beobachtet, wie sich der Kaufmann mit zwei anderen Männern unterhält und das nicht sonderlich freundlich.<br> ${name} nähert sich langsam und es wird klar, als der Kaufmann nur noch wenige Meter entfernt war, dass es sich um einen Streit handelt.<br> Anscheind wurde der Kaufmann bestohlen.`,
@@ -92,33 +120,33 @@ stalkingKaufmann: {
 },
 
 peopleBeforeSchafott: {
-        title: "Prolog",
-        story: `Es ist ein bunter Mix an Menschen der hier steht. Viele unterhalten sich angeregt und ${name} schnappt einige Bruchstücke auf und erfährt, dass die Marine berüchtigte Piraten gefasst hat, welche heute hingerichtet werden sollen.`,
-       choices:[
-           {
-               choice: "Neben  dir steht ein älterer Mann, du fragst ihn was er weiß.",
-               destination: "talkOldMan"
-           },
-           {
-               choice: "Deine Augen bleiben an einen reichen Kaufmann hängen. Du beobachtest ihn.",
-               destination: "stalkingKaufmann"
-           },
-       ]
-   },
+            title: "Prolog",
+            story: `Es ist ein bunter Mix an Menschen der hier steht. Viele unterhalten sich angeregt und ${name} schnappt einige Bruchstücke auf und erfährt, dass die Marine berüchtigte Piraten gefasst hat, welche heute hingerichtet werden sollen.`,
+            choices:[
+            {
+            choice: "Neben  dir steht ein älterer Mann, du fragst ihn was er weiß.",
+            destination: "talkOldMan"
+            },
+            {
+            choice: "Deine Augen bleiben an einen reichen Kaufmann hängen. Du beobachtest ihn.",
+            destination: "stalkingKaufmann"
+            },
+            ]
+            },
 
 standingPlaza2: {
             title: "Prolog",
             story: `${name} hebt mitten im Getümmel den Kopf nach oben und versinkt in ihren/seinen Gedanken. Der Himmel ist grau und es sieht aus als würde bald ein Unwetter aufziehen.`,
             choices:[
-                   {
-                       choice: "Weiter nachdenken",
-                       destination: "standingPlaza3"
-                   },
-                   {
-                       choice: "Ein Schrei ertönt und reißt dich aus den Gedanken",
-                       destination: "screamPlaza"
-                   },
-                ]  
+            {
+            choice: "Weiter nachdenken",
+            destination: "standingPlaza3"
+            },
+            {
+            choice: "Ein Schrei ertönt und reißt dich aus den Gedanken",
+            destination: "screamPlaza"
+            },
+            ]  
             },     
 screamPlaza: {
             title: "Prolog",
@@ -138,16 +166,16 @@ captureThief: {
             title: "Prolog",
             story: `${name} eilt dem angeblichen Dieb hinterher. Weg von dem Weg der zum Schafott führt hinein in eine vollkommen verlassene Gasse. Nach Luft schnappend holt ${name} die fliehende Person ein.`,
             choices:[
-                        {
-                            choice: "Ergreif den Arm des Diebes.",
-                            destination: "Fight"
-                        },
-                        {
-                            choice: "Erhebe deine Stimme und sage: Bleib stehen!",
-                            destination: "talkGasse"
-                               },
-                            ]  
-                        },                   
+            {
+            choice: "Ergreif den Arm des Diebes.",
+            destination: "Fight"
+            },
+            {
+            choice: "Erhebe deine Stimme und sage: Bleib stehen!",
+            destination: "talkGasse"
+            },
+            ]  
+            },                   
                         
 Fight: {
                 title: "Prolog",
@@ -186,7 +214,37 @@ talkGasse: {
                             destination: "deepGassetrueTalk"
                             },
                             ]  
-                            },          
+                            },
+
+deepGasseTalk: {
+                title: "Prolog",
+                story: `Wurm sieht ${name} lächelnd an. <br> "Ja, ich hab das letzte Jahr ziemlich zu gelegt. Aber die anderen sind immer noch größer als ich", schmollt er gespielt. Wurm läd ${name} dazu ein, mit ins Versteck zu kommen und erzählt, dass es sich stark verändert hat, seit ${name} die Stadt verlassen hat.`,
+                    choices:[
+                            {
+                            choice: "Mit Wurm mitgehen.",
+                            destination: "walkingTalk"
+                            },
+                            {
+                            choice: "Wurm erklären, dass du noch etwas zu erledigen hast und nach kommst.",
+                            destination: "deepGasseFarwell"
+                            },
+                            ]  
+                            }, 
+                                            
+deepGasetrueTalk: {
+                title: "Prolog",
+                story: `Wurm lächelt ${name} stolz an. "Ja, hab mich gut gemacht, hm? Meinst du Arbeit im Sinne von wie früher?", erkundigt er sich und wackelt amüsiert mit seinen Augenbrauen.`,
+                    choices:[
+                            {
+                            choice: "Du erzählst ihm, dass du ehrliche Arbeit suchst und fragst ob du ihn und die anderen später besuchen darfst.",
+                            destination: "aufbruchSchafott"
+                            },
+                            {
+                            choice: "",
+                            destination: ""
+                            },
+                            ]  
+                            }, 
     
 standingPlaza3: {
             title: "Prolog",
