@@ -240,8 +240,8 @@ deepGasetrueTalk: {
                             destination: "aufbruchSchafott"
                             },
                             {
-                            choice: "",
-                            destination: ""
+                            choice: "Du zuckst mit den Schultern und fragst Wurm ob er etwas für dich hätte.",
+                            destination: "askingJob"
                             },
                             ]  
                             }, 

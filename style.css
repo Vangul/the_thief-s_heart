@@ -1,24 +1,22 @@
 .header {
     display: flex;
-    height: 50px;
-    width: 400px;
+    flex-direction: row;
+    flex: 1 1 20%;
     background-color: darkslategray;
     list-style: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 18px;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-   
+    text-align: center;
+    
     
 
 }
 .h1{
-    display:flex;
     background-color: forestgreen;
     border: 5px solid lightgreen;
     border-radius: 60px 30px 60px 30px;
-    justify-content: center;
-    align-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bolder;
     padding: 0px;
