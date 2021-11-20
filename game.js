@@ -90,6 +90,34 @@ rememberDad: {
     ]
 },
 
+questionOldMan: {
+    title: "Prolog",
+    story: ``,
+    choices:[
+        {
+            choice: "",
+            destination: ""
+        },
+        {   choice: "",
+            destination: ""
+        },
+    ]
+},
+
+rememberDad2: {
+    title: "Prolog",
+    story: ` `,
+    choices:[
+        {
+            choice: "",
+            destination: ""
+        },
+        {   choice: "",
+            destination: ""
+        },
+    ]
+},
+
 grumpyKaufmann: {
     title: "Prolog",
     story: `Etwas kopflos stürmt ${name} durch die Menge. Von den Erinnerungen an den Vater geplagt. Dabei rempelt ${name} ausversehen einen Mann an, der sichtbar zur Gilde der Kaufleute gehört. <br> ${name} hat eine hitzige Diskussion unterbrochen und ein Mann hält ${name} am Handgelenk fest. <br> "Hier geblieben kleiner Dieb", raunt der Mann in ${name}s Ohr.`,

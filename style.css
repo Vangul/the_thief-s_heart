@@ -1,8 +1,8 @@
 .header {
     display: flex;
     flex-direction: row;
+    
     flex: 1 1 20%;
-    background-color: darkslategray;
     list-style: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 18px;
@@ -13,9 +13,12 @@
     
 
 }
+.list {
+    border: 5px dotted darkcyan;
+}
 .h1{
-    background-color: forestgreen;
-    border: 5px solid lightgreen;
+    background-color: wheat;
+    border: 5px solid darkcyan;
     border-radius: 60px 30px 60px 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bolder;
@@ -27,13 +30,11 @@
 }
 
 #inhalt{
-    display: flex;
+    display:flex;
     flex-direction:column;
-    width: auto;
-    height: 600px;
-    border: 5px solid lightgreen;
-    border-radius: 60px 30px 60px 30px;
-    background-color: darkslategray;
+    border: 5px solid darkcyan;
+    border-radius: 33%;
+    background-color: wheat;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 36px;
     justify-content: center;
@@ -43,8 +44,8 @@
     
 }
 .box{
-    display:grid;
-    border: 5px solid lightgreen;
+    display: grid;
+    border: 3px dotted darkcyan;
     width: 300px;
     height: 700px;
 }
